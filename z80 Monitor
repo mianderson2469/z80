@@ -64,7 +64,7 @@ RESET_COMMAND:
 ;PRINT_MON_HDR
 ;Function: Print out program header info
 ;***************************************************************************
-MON_MSG: .BYTE "\r\nZ80 Computer\t\t2019 Michael Anderson\r\n\r\n",EOS
+MON_MSG: .BYTE "\r\nZ80 Computer\t\t2019 Matt Cook, Michael Anderson\r\n\r\n",EOS
 MON_VER: .BYTE "ROM Monitor v0.1\r\n\r\n",EOS
 MON_HLP: .BYTE "\t Input ? for command list\r\n",EOS
 
@@ -82,7 +82,7 @@ PRINT_MON_HDR:
 ;MON_PROMPT
 ;Function: Prompt user for input
 ;***************************************************************************			
-MON_PROMPT: .BYTE "&gt;",EOS
+MON_PROMPT: .BYTE ">",EOS
 
 MON_PROMPT_LOOP:
 			LD 		HL,MON_PROMPT		;Print monitor prompt
@@ -112,10 +112,6 @@ MON_COMMAND:
 ;***************************************************************************
 ;  PROGRAM:			UARTDriver        
 ;  PURPOSE:			Subroutines for a 16550 UART
-;  ASSEMBLER:		TASM 3.2        
-;  LICENCE:			
-;  AUTHOR :			Michael Anderson
-;  CREATE DATE :	22APR19
 ;***************************************************************************
 
 ;The eight addresses that the 16550 resides in I/O space.
@@ -210,10 +206,6 @@ UART_RX:
 ;***************************************************************************
 ;  PROGRAM:			MONCommands        
 ;  PURPOSE:			Subroutines for all monitor commands
-;  ASSEMBLER:		TASM 3.2        
-;  LICENCE:			
-;  AUTHOR :			Michael Anderson
-;  CREATE DATE :	22 APR 19
 ;***************************************************************************
 
 ;***************************************************************************
@@ -284,10 +276,6 @@ MEMORY_DUMP_BYTES:
 ;***************************************************************************
 ;  PROGRAM:			CONIO       
 ;  PURPOSE:			Subroutines for console I/O
-;  ASSEMBLER:		TASM 3.2        
-;  LICENCE:			
-;  AUTHOR :			Michael Anderson
-;  CREATE DATE :	22 APR 19
 ;***************************************************************************
 
 ;***************************************************************************
